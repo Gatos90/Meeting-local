@@ -1,0 +1,26 @@
+# Environment files with secrets
+.env.local
+
+# Build outputs
+src-tauri/target/
+src-tauri/binaries/
+out/
+.next/
+
+# Dependencies
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+src-tauri/gen/

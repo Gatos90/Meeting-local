@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Hardened Runtime entitlements for notarization -->
+
+	<!-- Allow unsigned executable memory (needed for JIT in whisper/LLM) -->
+	<key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+	<true/>
+
+	<!-- Disable library validation (needed for dynamic libraries) -->
+	<key>com.apple.security.cs.disable-library-validation</key>
+	<true/>
+
+	<!-- Allow JIT compilation -->
+	<key>com.apple.security.cs.allow-jit</key>
+	<true/>
+
+	<!-- Network access -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+
+	<key>com.apple.security.network.server</key>
+	<true/>
+
+	<!-- Audio recording (microphone access) -->
+	<key>com.apple.security.device.audio-input</key>
+	<true/>
+
+	<!-- Screen recording for system audio capture -->
+	<key>com.apple.security.screen-recording</key>
+	<true/>
+
+	<!-- File access -->
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+
+	<!-- IMPORTANT: Must be false for notarization -->
+	<key>com.apple.security.get-task-allow</key>
+	<false/>
+</dict>
+</plist>

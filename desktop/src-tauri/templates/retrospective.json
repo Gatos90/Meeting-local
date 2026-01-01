@@ -1,0 +1,60 @@
+{
+  "name": "Sprint Retrospective",
+  "description": "Modern agile retrospective using the 'What went well / What didn't / Actions' format. Captures team feedback and produces concrete improvement actions.",
+  "sections": [
+    {
+      "title": "Sprint Information",
+      "instruction": "Extract: (1) Sprint name/number (e.g., 'Sprint 23', 'Q4 Week 2'), (2) Sprint date range if mentioned, (3) Sprint goal if stated, (4) Facilitator name. If any information is not mentioned, write 'Not specified.'",
+      "format": "string"
+    },
+    {
+      "title": "Participants",
+      "instruction": "List all team members who participated in the retrospective. If someone's role is mentioned, include it. Note if anyone left early or joined late. Keep alphabetical. The retro facilitator should be marked with '[Facilitator]'.",
+      "format": "list"
+    },
+    {
+      "title": "Sprint Outcomes Summary",
+      "instruction": "If discussed, briefly summarize: (1) Sprint goal achievement (met/partially met/not met), (2) Key deliverables completed, (3) Velocity or story points if mentioned, (4) Any metrics discussed. Keep to 2-3 sentences. If outcomes were not reviewed, write 'Sprint outcomes not discussed in this retrospective.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "What Went Well",
+      "instruction": "Extract all positive observations shared by the team. Include: successes, things to celebrate, practices that worked, appreciation for team members, tools/processes that helped. Attribute each item to who said it if possible (e.g., 'Sarah: Good collaboration with design team'). Group similar items together. Capture the team's wins even if briefly mentioned - these boost morale. If voting occurred, note vote counts. If nothing positive was mentioned (rare), write 'No specific wins highlighted.'",
+      "format": "list",
+      "item_format": "| **What Went Well** | **Raised By** | **Votes** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "What Didn't Go Well / Challenges",
+      "instruction": "Extract all pain points, frustrations, challenges, and problems raised. Include: blockers encountered, process issues, communication problems, technical debt, scope creep, interruptions, tooling issues. Attribute to who raised each item. Be specific - 'too many meetings' is less useful than 'too many meetings interrupted deep work on Thursdays'. Capture the underlying issue, not just symptoms. Group related items. Note vote counts if voting occurred. If no issues raised, write 'No specific challenges identified.'",
+      "format": "list",
+      "item_format": "| **Challenge/Issue** | **Raised By** | **Votes** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "Ideas & Suggestions",
+      "instruction": "Extract any ideas, experiments, or suggestions proposed during the retro. These might be phrased as 'what if we...', 'could we try...', 'I suggest...'. Include both process improvements and technical suggestions. Not all ideas become action items - capture them all here for future reference. Note who proposed each idea and any initial reactions (support, concerns). If no ideas were proposed, write 'No specific suggestions captured.'",
+      "format": "list",
+      "item_format": "| **Idea/Suggestion** | **Proposed By** | **Initial Reaction** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "Action Items for Next Sprint",
+      "instruction": "Extract the COMMITTED action items the team agreed to implement. These are the concrete experiments or changes for next sprint. For each action: (1) Owner - who is responsible for driving this, (2) Specific action - what exactly will be done (should be measurable), (3) Success criteria - how will we know if it worked, (4) Due date or checkpoint. Only include items the team explicitly committed to, not all ideas discussed. Typically a retro should produce 1-3 focused actions. If no actions were committed, write 'No specific actions committed - team may want to follow up.'",
+      "format": "list",
+      "item_format": "| **Owner** | **Action** | **Success Metric** | **Due/Review Date** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Previous Action Items Review",
+      "instruction": "If the team reviewed action items from the previous retrospective, note the status of each: (1) What was the action, (2) Status (Completed, In Progress, Not Started, Dropped), (3) Brief notes on outcome or why not completed. If previous actions were not reviewed, write 'Previous action items not reviewed in this session.'",
+      "format": "list"
+    },
+    {
+      "title": "Team Health & Morale",
+      "instruction": "Capture any discussions about team morale, energy levels, burnout, or team dynamics. Note if a team health check was done and the results. Include any shout-outs or appreciations shared between team members. If not discussed, write 'Team health not explicitly discussed.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Parking Lot",
+      "instruction": "Note any topics raised but intentionally deferred for later discussion - either because they need more time, involve people not present, or are outside the retro scope. Include why they were parked and any suggested follow-up. If nothing was parked, omit this section.",
+      "format": "list"
+    }
+  ]
+}

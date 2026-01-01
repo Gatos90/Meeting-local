@@ -1,0 +1,82 @@
+{
+  "name": "Sales / Client Meeting",
+  "description": "Comprehensive sales and client meeting notes. Captures client needs, competitive intelligence, decision-making dynamics, and next steps for CRM and deal tracking.",
+  "sections": [
+    {
+      "title": "Meeting Information",
+      "instruction": "Extract: (1) Date and time, (2) Meeting type (discovery call, demo, negotiation, QBR, renewal discussion, check-in - infer from context), (3) Account/company name, (4) Deal stage if mentioned (prospect, qualified, proposal, negotiation, closed-won/lost), (5) Our account owner/AE name. Format as structured paragraph.",
+      "format": "string"
+    },
+    {
+      "title": "Attendees",
+      "instruction": "List all participants grouped by organization. For client attendees, capture: (1) Name, (2) Title/role, (3) Decision-making role if discernible (Economic Buyer, Technical Buyer, Champion, Influencer, Blocker, End User). Mark who seems to be the primary contact and who has decision authority. For our team, list name and role. If someone was mentioned but not present, note separately. This is critical for understanding the buying committee.",
+      "format": "list",
+      "item_format": "| **Name** | **Company** | **Title** | **Buying Role** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Meeting Summary",
+      "instruction": "Write a 3-4 sentence executive summary for the CRM. Include: (1) Meeting purpose/what was discussed, (2) Client's current sentiment (positive, neutral, concerned, etc.), (3) Key outcome or next step, (4) Deal impact (moving forward, stalled, at risk). This should help any team member quickly understand the meeting.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Client Needs & Pain Points",
+      "instruction": "Extract all stated and implied client needs, challenges, and pain points. Be specific - 'need better reporting' is less useful than 'CFO needs real-time cash flow visibility for board meetings'. For each need: (1) What is the need/pain, (2) Who expressed it, (3) Business impact if stated (cost, time, revenue, risk), (4) How urgent (critical, important, nice-to-have). These insights drive how we position our solution. If client needs were not discussed, write 'Client needs not explored in this meeting.'",
+      "format": "list",
+      "item_format": "| **Need/Pain Point** | **Expressed By** | **Business Impact** | **Urgency** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Client Goals & Success Criteria",
+      "instruction": "Document what success looks like for the client. Include: (1) Stated goals/objectives for this initiative, (2) KPIs or metrics they will use to measure success, (3) Timeline expectations, (4) What would make this project a 'win' for the stakeholders present. Understanding their success criteria is essential for proposals and ongoing relationship. If not discussed, write 'Success criteria not explicitly defined.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Budget & Commercial Discussion",
+      "instruction": "Capture all budget and commercial information. Include: (1) Budget mentioned (amount, range, or 'no budget discussed'), (2) Budget owner/approval process, (3) Fiscal year timing if relevant, (4) Pricing discussed or quoted, (5) Discounts requested or offered, (6) Contract terms discussed (length, payment terms, SLAs), (7) Procurement process and timeline, (8) Any concerns about pricing or ROI. Mark sensitive pricing details clearly. If budget was not discussed, write 'Budget not discussed in this meeting.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Decision Process & Timeline",
+      "instruction": "Extract information about how and when the client will make a decision. Include: (1) Who are the decision makers (names and roles), (2) What is the decision process (committee, single decision maker, procurement), (3) What approvals are needed, (4) Timeline for decision, (5) Compelling event or deadline driving urgency (e.g., contract expiration, board meeting, project deadline), (6) Potential delays or blockers to decision. If not discussed, write 'Decision process not clarified.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Competitive Intelligence",
+      "instruction": "Capture any information about competitors. Include: (1) Competitors mentioned by name, (2) Are they evaluating competitors currently, (3) What competitors are they using today, (4) How do they compare us to competitors (features, pricing, support), (5) What do they like/dislike about competitor solutions, (6) Any competitive objections or concerns raised. This is valuable intel - capture even passing mentions. If no competitive information shared, write 'No competitive information gathered.'",
+      "format": "list",
+      "item_format": "| **Competitor** | **Status** | **Client Perception** | **Our Differentiator** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Objections & Concerns",
+      "instruction": "List all objections, concerns, hesitations, or pushback expressed. For each: (1) The objection, (2) Who raised it, (3) How it was addressed (if at all), (4) Resolution status (resolved, partially addressed, open). Include both explicit objections and implicit concerns (hesitation in tone, 'I'm not sure about...'). These need follow-up. If no objections, write 'No objections raised.'",
+      "format": "list",
+      "item_format": "| **Objection/Concern** | **Raised By** | **Our Response** | **Status** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Requirements & Technical Fit",
+      "instruction": "Document technical/product requirements discussed. Include: (1) Must-have features or capabilities, (2) Nice-to-have features, (3) Integration requirements (what systems they need to connect), (4) Security/compliance requirements (SOC2, HIPAA, GDPR, etc.), (5) Technical concerns or questions, (6) Items needing technical follow-up or validation. If requirements were not discussed, write 'Technical requirements not covered.'",
+      "format": "list"
+    },
+    {
+      "title": "Agreed Deliverables",
+      "instruction": "List all deliverables promised to the client. Include: (1) What we committed to provide, (2) Owner on our team, (3) Due date, (4) Format/details. Be thorough - broken commitments damage relationships. Include proposals, demos, references, trials, documents, etc. If no deliverables promised, write 'No deliverables committed.'",
+      "format": "list",
+      "item_format": "| **Deliverable** | **Owner** | **Due Date** | **Notes** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Next Steps",
+      "instruction": "List all follow-up actions. Separate into: (1) OUR ACTIONS: What we need to do, who, by when. (2) CLIENT ACTIONS: What they committed to do. (3) JOINT ACTIONS: Meetings to schedule, etc. Be specific about timing. This drives the deal forward. Every meeting should end with clear next steps.",
+      "format": "list",
+      "item_format": "| **Action** | **Owner** | **Due** | **Type** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Relationship Notes",
+      "instruction": "Capture personal/relationship details mentioned that help build rapport: (1) Personal interests, hobbies, or family mentions, (2) Upcoming events (vacations, conferences, etc.), (3) Professional background shared, (4) Communication preferences noted. Keep appropriate - business-relevant relationship building only. If nothing notable, omit this section.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Deal Risk Assessment",
+      "instruction": "Based on this meeting, provide a brief risk assessment: (1) Deal health (Strong, Healthy, At Risk, Critical), (2) Key risks identified, (3) What we need to do to derisk. Be candid - this helps with forecasting and prioritization. One paragraph maximum.",
+      "format": "paragraph"
+    }
+  ]
+}

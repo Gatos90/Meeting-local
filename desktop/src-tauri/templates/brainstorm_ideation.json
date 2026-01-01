@@ -1,0 +1,70 @@
+{
+  "name": "Brainstorm / Ideation Session",
+  "description": "Captures creative brainstorming and ideation sessions. Preserves all ideas generated, captures voting/prioritization, and documents feasibility discussions.",
+  "sections": [
+    {
+      "title": "Session Information",
+      "instruction": "Extract: (1) Date and duration, (2) Session topic or problem statement being addressed, (3) Facilitator name, (4) Brainstorm format used if mentioned (e.g., round-robin, silent brainstorm, crazy eights, mind mapping). If problem statement is not explicit, infer from discussion.",
+      "format": "string"
+    },
+    {
+      "title": "Participants",
+      "instruction": "List all participants. For brainstorms, note each person's perspective/expertise if relevant (e.g., 'Sarah (Engineering)', 'Mike (Customer Success)', 'Lisa (Design)'). Different perspectives are valuable in ideation.",
+      "format": "list"
+    },
+    {
+      "title": "Problem Statement / Challenge",
+      "instruction": "Clearly articulate the problem or question the brainstorm is addressing. Include: (1) The core problem statement, (2) Any constraints mentioned (budget, timeline, technical limitations), (3) Success criteria - what would make a good solution, (4) What has already been tried if mentioned. A well-defined problem is half the solution. If problem was not clearly stated, write 'Problem statement was not explicitly defined - inferring from discussion: [your inference].'",
+      "format": "paragraph"
+    },
+    {
+      "title": "All Ideas Generated",
+      "instruction": "Capture EVERY idea mentioned, no matter how wild or incomplete. This is the raw creative output. For each idea: (1) Brief description of the idea, (2) Who proposed it (if identifiable). Do NOT filter or judge ideas at this stage. Include: incremental improvements, wild/moonshot ideas, combinations of other ideas, and half-formed thoughts. Group related ideas if helpful. Quantity matters in brainstorms - err on the side of capturing more.",
+      "format": "list",
+      "item_format": "| **Idea** | **Proposed By** |\n| --- | --- |"
+    },
+    {
+      "title": "Idea Clusters / Themes",
+      "instruction": "If the group organized ideas into themes or clusters, capture that structure. List each cluster/theme with the ideas grouped under it. This helps see patterns. If ideas were not clustered, identify 2-4 natural themes yourself based on the ideas generated and note 'Themes identified by AI, not discussed in session.'",
+      "format": "list"
+    },
+    {
+      "title": "Voting & Prioritization",
+      "instruction": "If voting or prioritization occurred, document the results. Include: (1) Voting method used (dot voting, ranking, Roman voting, etc.), (2) Top-voted ideas with vote counts, (3) Any ideas eliminated and why, (4) Final prioritized list if one was created. If no voting occurred, write 'Formal prioritization not conducted in this session.'",
+      "format": "list",
+      "item_format": "| **Rank** | **Idea** | **Votes/Score** | **Notes** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Ideas Explored in Depth",
+      "instruction": "For ideas that received significant discussion or exploration, provide more detail. For each explored idea: (1) The idea, (2) How it would work (detailed description), (3) Benefits/pros discussed, (4) Challenges/cons raised, (5) Questions that need answering, (6) Rough effort estimate if discussed. Not all ideas get explored - focus on the ones the group spent time developing.",
+      "format": "list",
+      "item_format": "| **Idea** | **How It Works** | **Pros** | **Cons** | **Open Questions** |\n| --- | --- | --- | --- | --- |"
+    },
+    {
+      "title": "Feasibility Assessment",
+      "instruction": "If feasibility was discussed, summarize the assessment. For ideas evaluated: (1) Technical feasibility (can we build it?), (2) Resource requirements (time, money, people), (3) Dependencies or prerequisites, (4) Risk level, (5) Timeline estimate. Use a simple scale if discussed (Easy/Medium/Hard). If feasibility was not assessed, write 'Feasibility not formally evaluated - may need follow-up assessment.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Decisions Made",
+      "instruction": "Document any decisions reached during the brainstorm. Include: (1) What ideas are moving forward, (2) What was explicitly rejected and why, (3) What needs more research before deciding. Brainstorms often end with next steps rather than final decisions - capture the actual outcome.",
+      "format": "list"
+    },
+    {
+      "title": "Next Steps & Action Items",
+      "instruction": "List follow-up actions. Include: (1) Ideas to prototype or test, (2) Research needed, (3) People to consult, (4) Meetings to schedule, (5) Deadlines set. For each action: owner, task, due date. Convert brainstorm energy into concrete forward motion.",
+      "format": "list",
+      "item_format": "| **Owner** | **Action** | **Due Date** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "Parking Lot",
+      "instruction": "Ideas or topics that came up but were deferred for later. Include: (1) The idea/topic, (2) Why it was parked (out of scope, needs more data, etc.), (3) Suggested follow-up. Don't lose good ideas just because they were out of scope today.",
+      "format": "list"
+    },
+    {
+      "title": "Session Insights",
+      "instruction": "Capture meta-observations about the brainstorm. Include: (1) What patterns or themes emerged, (2) Surprising ideas or directions, (3) Energy/engagement level of the group, (4) Process improvements for future brainstorms. Keep brief - 2-3 sentences. If nothing notable, omit this section.",
+      "format": "paragraph"
+    }
+  ]
+}
