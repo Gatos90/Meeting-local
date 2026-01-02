@@ -1,0 +1,47 @@
+[package]
+name = "llm-sidecar"
+version = "0.1.0"
+edition = "2021"
+description = "LLM inference sidecar for Meeting-Local"
+
+[[bin]]
+name = "llm-sidecar"
+path = "src/main.rs"
+
+[features]
+default = []
+cuda = ["mistralrs/cuda"]
+metal = ["mistralrs/metal"]
+flash-attn = ["mistralrs/flash-attn"]
+
+[dependencies]
+# LLM inference - using mistral.rs for automatic KV cache management
+# default-features = false ensures we control GPU backend via our feature flags (cuda/metal/none)
+mistralrs = { git = "https://github.com/EricLBuehler/mistral.rs.git", default-features = false }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# UUID for tool call IDs
+uuid = { version = "1.0", features = ["v4"] }
+
+# Directory handling
+dirs = "5.0"
+
+# Platform-specific
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = ["Win32_System_Console"] }

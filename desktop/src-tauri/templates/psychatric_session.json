@@ -1,0 +1,64 @@
+{
+  "name": "Psychiatric Session Note (SOAP Format)",
+  "description": "Clinical progress note template using SOAP format. Designed for provider review with AI-assisted summarization. IMPORTANT: This generates a draft requiring clinical review before becoming part of medical record.",
+  "sections": [
+    {
+      "title": "Session Metadata",
+      "instruction": "Extract session details. Include: (1) Session date, (2) Session type (initial evaluation, follow-up, crisis intervention, medication management, therapy session - infer from content if not stated), (3) Approximate duration, (4) Modality (in-person, telehealth, phone - if discernible). Do NOT include patient identifying information beyond what is necessary. If session type cannot be determined, write 'Session type unclear from recording.'",
+      "format": "string"
+    },
+    {
+      "title": "AI-Generated Summary",
+      "instruction": "Provide a clinical summary in two parts: (1) ONE-LINE TAKEAWAY: A single sentence capturing the most clinically significant finding or change from this session. (2) EXECUTIVE SUMMARY: A 3-5 sentence paragraph summarizing: current clinical status, main topics discussed, notable changes from prior sessions if mentioned, and immediate clinical priorities. Use objective clinical language. Note: This is an AI-generated summary and requires clinician review and attestation.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Subjective (S)",
+      "instruction": "Document the patient's self-reported information. Include: (1) Chief complaint or reason for visit in patient's own words when possible, (2) Current mood description (patient's terms + your clinical observation), (3) Sleep patterns - hours, quality, changes, (4) Appetite/weight changes, (5) Energy level, (6) Current stressors or life events discussed, (7) Medication effects/side effects as reported by patient, (8) Any safety concerns expressed by patient. Use phrases like 'Patient reports...' or 'According to patient...' If any category was not discussed, note 'Not addressed this session.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Objective (O)",
+      "instruction": "Document observable clinical findings based on what can be determined from the recording. Include when discernible: (1) General appearance (if video or described), (2) Behavior during session, (3) Speech characteristics (rate, volume, tone - these may be audible), (4) Affect/mood observed, (5) Thought process (organized, tangential, etc.), (6) Orientation if assessed, (7) Insight and judgment observations. Only document what is actually observable or testable from the recording. Do not fabricate observations. Write 'Unable to assess from audio recording' for visual elements if audio-only.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Assessment (A)",
+      "instruction": "Provide clinical assessment. Include: (1) Current diagnostic impression (note if confirmed diagnosis or working/differential), (2) Clinical progress assessment (improved, stable, declined, mixed), (3) Risk assessment - specifically note any suicidal ideation (SI), homicidal ideation (HI), self-harm, or safety concerns discussed. If risk was assessed as low/none, state that explicitly. (4) Progress toward treatment goals if discussed. Use clinical judgment language: 'appears to be', 'consistent with', 'suggests'. If formal diagnoses are stated, include ICD/DSM codes if mentioned.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Plan (P)",
+      "instruction": "Document the treatment plan. Include: (1) Medication changes - new prescriptions, dose adjustments, discontinuations with rationale, (2) Therapy interventions used or planned (CBT techniques, psychoeducation topics, etc.), (3) Referrals made or recommended, (4) Labs or tests ordered, (5) Patient homework or behavioral assignments, (6) Crisis plan updates if discussed, (7) Follow-up timing and plan. For each medication change, include drug name, dose, frequency, and rationale if stated.",
+      "format": "list",
+      "item_format": "| **Intervention** | **Details** | **Rationale** | **Follow-up** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Current Medications",
+      "instruction": "List all psychiatric medications mentioned as currently prescribed. For each: medication name, dose, frequency, route (oral/injection/etc.), and any notes about adherence or side effects discussed. If medication list is not reviewed this session, write 'Medication review not conducted this session - refer to prior documentation.'",
+      "format": "list",
+      "item_format": "| **Medication** | **Dose** | **Frequency** | **Notes** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Diagnoses",
+      "instruction": "List diagnoses discussed or referenced. Include ICD-10 or DSM-5 codes if mentioned. Distinguish between (1) Established diagnoses, (2) Working diagnoses/differential, (3) Rule-out diagnoses. If diagnoses are not explicitly discussed this session, write 'Diagnoses not reviewed this session.'",
+      "format": "list",
+      "item_format": "| **Diagnosis** | **Code** | **Status** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "Safety Assessment & Risk Management",
+      "instruction": "Document safety-related content. Include: (1) Suicidal ideation assessment - present/absent, if present: passive vs active, with or without plan/intent, (2) Homicidal ideation - present/absent, (3) Self-harm urges or behaviors, (4) Access to lethal means discussed, (5) Safety plan reviewed or updated, (6) Emergency contacts and crisis resources reviewed, (7) Hospitalization considered/discussed. If safety assessment was not formally conducted, note 'Formal safety assessment not documented in this session.' This section should NEVER be left blank - always note whether safety was addressed or not.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Next Appointment",
+      "instruction": "Document follow-up scheduling: date, time, modality (in-person/telehealth), and any specific agenda items for next session. If not scheduled during session, write 'Follow-up to be scheduled.'",
+      "format": "string"
+    },
+    {
+      "title": "Documentation Notes",
+      "instruction": "Note: (1) 'AI-ASSISTED DRAFT - REQUIRES CLINICIAN REVIEW AND ATTESTATION', (2) Any portions of the session that were unclear or inaudible, (3) Areas requiring clinician clarification or additional documentation, (4) Time of documentation generation.",
+      "format": "paragraph"
+    }
+  ]
+}

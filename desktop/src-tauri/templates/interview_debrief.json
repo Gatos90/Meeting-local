@@ -1,0 +1,79 @@
+{
+  "name": "Interview Debrief",
+  "description": "Structured interview debrief for hiring decisions. Captures interviewer assessments, skills evaluation, and hiring recommendation. Supports consistent, fair evaluation.",
+  "sections": [
+    {
+      "title": "Candidate & Position Info",
+      "instruction": "Extract: (1) Candidate name (or 'Candidate' if not stated - some teams anonymize), (2) Position/role being interviewed for, (3) Interview date(s), (4) Interview round (phone screen, technical, onsite, final, etc.), (5) Debrief date. If any information is not mentioned, note 'Not specified.'",
+      "format": "string"
+    },
+    {
+      "title": "Interview Panel",
+      "instruction": "List all interviewers participating in the debrief. For each: (1) Name, (2) Role/title, (3) What they interviewed for (e.g., 'technical skills', 'culture fit', 'system design', 'behavioral'). Note who is the hiring manager and who is the debrief facilitator if identifiable.",
+      "format": "list",
+      "item_format": "| **Interviewer** | **Role** | **Interview Focus** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "Overall Recommendation Summary",
+      "instruction": "Summarize the hiring decision or recommendation outcome. Include: (1) Final recommendation (Strong Hire, Hire, No Hire, Strong No Hire, or Still Discussing), (2) Level of consensus (unanimous, majority, split), (3) Key factors driving the decision in 2-3 sentences. If no final decision was reached, summarize where the discussion ended and what would resolve it. This is the most important section for quick reference.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Skills Assessment Matrix",
+      "instruction": "Extract individual ratings or assessments for each skill area discussed. Create a row for each skill/competency evaluated. Use the rating scale discussed (often: Exceeds/Meets/Below/Far Below, or 1-4, or Pass/Fail). Include: (1) Skill/competency name, (2) Rating given, (3) Key evidence or examples supporting the rating. If ratings were not formalized, summarize qualitative assessment. If a skill area was not evaluated, note 'Not assessed.'",
+      "format": "list",
+      "item_format": "| **Skill Area** | **Rating** | **Evidence/Notes** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "Technical Competence",
+      "instruction": "Summarize the technical evaluation. Include: (1) Overall technical rating/assessment, (2) Specific technical strengths demonstrated (with examples from interviews), (3) Technical gaps or concerns, (4) Performance on coding/technical exercises if applicable, (5) Relevant technical experience discussed, (6) How their technical skills compare to the role's requirements. Be specific with examples. If technical skills were not evaluated, write 'Technical assessment not included in this debrief.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Behavioral & Soft Skills",
+      "instruction": "Summarize behavioral and interpersonal assessment. Include: (1) Communication skills observed, (2) Collaboration indicators, (3) Problem-solving approach, (4) Leadership potential (if applicable), (5) Responses to behavioral questions (e.g., conflict resolution, handling ambiguity), (6) Specific examples that stood out. Note both strengths and concerns. If not evaluated, write 'Behavioral assessment not included.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Culture & Values Fit",
+      "instruction": "Assess cultural alignment. Include: (1) How the candidate aligns with company values (reference specific values if mentioned), (2) Team fit considerations, (3) Working style observations, (4) Motivations and career goals alignment, (5) Any culture concerns raised, (6) Specific examples demonstrating culture fit or misfit. Note: Assess culture 'add' as well as 'fit' - does the candidate bring valuable diversity of perspective? If not assessed, write 'Culture fit not explicitly evaluated.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Individual Interviewer Feedback",
+      "instruction": "Capture each interviewer's individual assessment. For each person who spoke in the debrief: (1) Interviewer name, (2) Their recommendation (hire/no hire/leaning), (3) Key points from their interview, (4) Specific examples or stories they shared, (5) Questions or concerns they raised. This captures the full range of perspectives before consensus.",
+      "format": "list",
+      "item_format": "| **Interviewer** | **Recommendation** | **Key Points** | **Concerns** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Strengths",
+      "instruction": "List the candidate's top strengths identified across interviews. Be specific - 'smart' is less useful than 'demonstrated strong analytical skills by systematically breaking down the system design problem.' Include who raised each strength if helpful. Prioritize strengths most relevant to the role.",
+      "format": "list"
+    },
+    {
+      "title": "Concerns & Red Flags",
+      "instruction": "List concerns, weaknesses, or red flags raised. Be specific and fair. For each concern: (1) What is the concern, (2) Who raised it, (3) How significant is it (dealbreaker vs. coachable), (4) Any mitigating factors discussed. Include gaps compared to role requirements. Even for hire decisions, document concerns for onboarding/development. If no concerns raised, write 'No significant concerns identified.'",
+      "format": "list"
+    },
+    {
+      "title": "Level Assessment",
+      "instruction": "If discussed, capture the level/seniority assessment. Include: (1) What level was the candidate interviewed for, (2) What level does the panel recommend, (3) If there's a gap, what would bridge it, (4) Comparison to current team members at that level if mentioned. If level was not discussed, write 'Level not explicitly evaluated.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Compensation & Logistics",
+      "instruction": "Note any compensation or logistics discussed. Include: (1) Compensation expectations if shared, (2) Start date constraints or preferences, (3) Location/remote considerations, (4) Other offers or timeline pressure, (5) Any special circumstances. If not discussed, write 'Compensation/logistics not discussed in debrief.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Final Decision & Next Steps",
+      "instruction": "Document the outcome. Include: (1) Final recommendation (Hire at Level X / No Hire / Additional Interviews Needed), (2) Next steps (extend offer, schedule additional interviews, rejection), (3) Who is responsible for next steps, (4) Timeline for action, (5) Any conditions on the offer. If decision is pending, note what needs to happen to reach a decision.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Feedback for Future Interviews",
+      "instruction": "Capture any process feedback or notes for future interviews with this candidate or similar roles. Include: (1) What worked well in the interview process, (2) What should be assessed differently, (3) Questions or exercises that were particularly revealing, (4) If proceeding, what to probe more in next round. If none discussed, omit this section.",
+      "format": "paragraph"
+    }
+  ]
+}

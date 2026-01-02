@@ -1,0 +1,48 @@
+{
+  "name": "Standard Meeting Notes",
+  "description": "Versatile template for general meetings. Captures context, decisions, and actions in a clean, scannable format.",
+  "sections": [
+    {
+      "title": "Meeting Overview",
+      "instruction": "Extract: (1) Meeting title or topic if stated, (2) Date and time, (3) Duration (approximate if not explicit), (4) Meeting organizer/facilitator if identifiable, (5) Meeting purpose or objective if stated at the beginning. Format as a brief header paragraph. If elements are unclear, note 'Not specified.'",
+      "format": "string"
+    },
+    {
+      "title": "Attendees",
+      "instruction": "List all participants who spoke or were addressed by name. Format: 'Name (Role/Team)' if role is mentioned, otherwise just name. Note the meeting organizer with '[Organizer]' if identifiable. If someone joined late, left early, or was mentioned but not present, note accordingly. Keep alphabetical within each group. If attendance is unclear, write 'Attendance list could not be fully determined from recording.'",
+      "format": "list"
+    },
+    {
+      "title": "Executive Summary",
+      "instruction": "Write a concise 2-4 sentence summary of the meeting. Include: (1) Main purpose/topic, (2) Most important outcome or decision, (3) Overall next steps. This should allow someone to understand the meeting without reading further. Write in past tense, professional tone.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Key Decisions",
+      "instruction": "List all decisions made during the meeting. A decision is a conclusion, choice, or agreement that changes direction or commits resources. For each decision: (1) What was decided - be specific and complete, (2) Who made or approved the decision, (3) Brief rationale if discussed. Include both explicit decisions ('We agreed to...') and clear consensus reached. Do not include items still under discussion. If no decisions were made, write 'No final decisions made in this meeting.'",
+      "format": "list",
+      "item_format": "| **Decision** | **Made By** | **Rationale** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "Action Items",
+      "instruction": "Extract ALL action items, tasks, and follow-ups committed to. This is the most actionable section. For each item: (1) Owner - specific person responsible (not 'someone' or 'team'), (2) Task - clear, actionable description of what needs to be done, (3) Due date - specific date if given, or relative timing ('by Friday', 'next week', 'ASAP'), (4) Context - brief reference to why this action is needed. Capture even casually mentioned commitments ('I'll send that', 'Let me check on that'). If owner is unclear, note 'Owner TBD'. If no actions, write 'No action items from this meeting.'",
+      "format": "list",
+      "item_format": "| **Owner** | **Action Item** | **Due Date** | **Context** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Discussion Highlights",
+      "instruction": "Summarize the main topics discussed. Organize by topic/theme if multiple subjects were covered. For each topic, include: (1) What was discussed, (2) Key points or perspectives shared, (3) Any conclusions or open questions. Do not repeat decisions or action items here - this section is for important context and discussions that did not result in formal decisions but are worth noting. Write in paragraph form with specifics.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Open Questions & Parking Lot",
+      "instruction": "List questions that were raised but not answered, or topics that were explicitly deferred for later. Include: (1) The question or topic, (2) Who raised it, (3) Suggested next step for resolution (if mentioned). These need follow-up. If none, write 'No open questions.'",
+      "format": "list"
+    },
+    {
+      "title": "Next Meeting",
+      "instruction": "Note any follow-up meeting scheduled or discussed. Include: date/time if set, proposed agenda items, any preparation needed. If no follow-up was discussed, write 'Follow-up meeting not scheduled.'",
+      "format": "string"
+    }
+  ]
+}

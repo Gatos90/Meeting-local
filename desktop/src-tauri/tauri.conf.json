@@ -1,0 +1,79 @@
+{
+    "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+    "productName": "meeting-local",
+    "version": "0.1.0",
+    "identifier": "com.local.meeting",
+    "build": {
+        "frontendDist": "../out",
+        "devUrl": "http://localhost:3000",
+        "beforeDevCommand": "pnpm dev",
+        "beforeBuildCommand": "pnpm build"
+    },
+    "app": {
+        "windows": [{
+            "title": "Meeting Local",
+            "width": 1000,
+            "height": 700,
+            "resizable": true,
+            "fullscreen": false,
+            "decorations": true
+        }],
+        "security": {
+            "csp": {
+                "default-src": "'self'",
+                "style-src": "'self' 'unsafe-inline'",
+                "img-src": "'self' asset: https://asset.localhost data:",
+                "connect-src": "'self' http://localhost:11434 http://localhost:5167 http://localhost:8178"
+            },
+            "assetProtocol": {
+                "enable": true,
+                "scope": ["$APPDATA/**", "$VIDEO/**", "$DOCUMENT/**", "$HOME/**"]
+            },
+            "capabilities": [{
+                "identifier": "main",
+                "description": "Main window capability",
+                "windows": ["main"],
+                "permissions": [
+                    "fs:default",
+                    "fs:allow-read-file",
+                    "fs:read-all",
+                    "fs:write-all",
+                    "core:path:default",
+                    "core:event:default",
+                    "core:window:default",
+                    "core:app:default",
+                    {
+                        "identifier": "fs:scope",
+                        "allow": [
+                            { "path": "$APPDATA/**" },
+                            { "path": "$VIDEO/**" },
+                            { "path": "$DOCUMENT/**" },
+                            { "path": "$HOME/**" }
+                        ]
+                    }
+                ]
+            }]
+        }
+    },
+    "bundle": {
+        "active": true,
+        "targets": "all",
+        "icon": [
+            "icons/32x32.png",
+            "icons/128x128.png",
+            "icons/128x128@2x.png",
+            "icons/icon.icns",
+            "icons/icon.ico"
+        ],
+        "externalBin": [
+            "binaries/llm-sidecar"
+        ],
+        "resources": [
+            "templates/*"
+        ],
+        "macOS": {
+            "entitlements": "entitlements.plist",
+            "hardenedRuntime": true
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Daily Standup",
+  "description": "Concise, scannable updates for agile/scrum team standups. Optimized for quick review.",
+  "sections": [
+    {
+      "title": "Meeting Info",
+      "instruction": "Extract the meeting date in YYYY-MM-DD format. If a specific date is mentioned, use it. If only day-of-week is mentioned (e.g., 'Monday standup'), infer the date contextually or write 'Date not explicitly stated'. Include the approximate duration if discernible from the transcript.",
+      "format": "string"
+    },
+    {
+      "title": "Attendees",
+      "instruction": "List all team members who actively participated or were addressed by name. Format as a bullet list of names. If someone's role is mentioned (e.g., 'Sarah, our QA lead'), include it in parentheses: 'Sarah (QA Lead)'. If participation is unclear from audio, note: 'Additional attendees may have been present but did not speak.' Keep the list alphabetical.",
+      "format": "list"
+    },
+    {
+      "title": "Yesterday's Progress",
+      "instruction": "Extract completed work from the previous day/period. Aggregate by person. For each person, use concise bullet points (1 line each). Focus on what was DONE, not what was attempted. If someone mentions working on something but not completing it, move that to Today's Plan instead. If no progress is mentioned for the team, write 'No specific progress updates shared.'",
+      "format": "list",
+      "item_format": "| **Person** | **Completed** |\n| --- | --- |"
+    },
+    {
+      "title": "Today's Plan",
+      "instruction": "Extract planned work for today. Aggregate by person. Keep items brief (max 10 words each). Include items that are 'in progress' or 'continuing'. If someone expresses uncertainty ('I might work on X'), include it with '(tentative)' notation. If no plans are stated for the team, write 'No specific plans shared.'",
+      "format": "list",
+      "item_format": "| **Person** | **Planned Work** |\n| --- | --- |"
+    },
+    {
+      "title": "Blockers & Impediments",
+      "instruction": "Extract any blockers, impediments, dependencies, or requests for help. This is critical information - do not miss any. For each blocker, identify: (1) Who is blocked, (2) What the blocker is, (3) Impact if mentioned (e.g., 'blocking release', 'slowing down'), (4) If someone offered to help or if escalation was mentioned. If no blockers are mentioned, explicitly write 'No blockers reported in this standup.'",
+      "format": "list",
+      "item_format": "| **Person** | **Blocker** | **Impact/Status** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "Quick Announcements",
+      "instruction": "Capture any brief announcements, reminders, or FYIs that came up (e.g., 'reminder: demo at 3pm', 'I'll be out tomorrow', 'sprint ends Friday'). Keep each to one line. If none, write 'No announcements.'",
+      "format": "list"
+    }
+  ]
+}

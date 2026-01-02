@@ -1,0 +1,63 @@
+{
+  "name": "1:1 Meeting",
+  "description": "Manager-report or peer 1:1 meetings. Covers career development, feedback, blockers, and personal check-in. Maintains appropriate confidentiality.",
+  "sections": [
+    {
+      "title": "Meeting Info",
+      "instruction": "Extract: (1) Date, (2) Participants and their relationship (e.g., 'Sarah [Manager] with John [Direct Report]' or 'Peer 1:1 between Sarah and John'), (3) Duration if discernible, (4) Cadence if mentioned (weekly, bi-weekly, monthly). If relationship is unclear, just note the participants.",
+      "format": "string"
+    },
+    {
+      "title": "Summary",
+      "instruction": "Write a 2-3 sentence personal summary of this 1:1. Capture the overall tone (productive, challenging, celebratory, etc.) and the main themes discussed. Keep warm but professional - 1:1 notes should feel human. Note: 1:1 notes may contain sensitive content and should be stored appropriately.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Personal Check-In",
+      "instruction": "Capture the personal/wellbeing portion of the 1:1. Include: (1) How the person is doing generally, (2) Work-life balance mentions, (3) Energy/stress levels, (4) Personal life topics they chose to share (vacations, family, hobbies), (5) Any concerns about workload or burnout. Keep confidential and respectful - only note what was freely shared. If no personal check-in occurred, write 'Personal check-in not covered.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Wins & Celebrations",
+      "instruction": "Note accomplishments, wins, and positive recognition shared. Include: (1) What went well since last 1:1, (2) Accomplishments the person is proud of, (3) Recognition given or received, (4) Positive feedback delivered. Celebrating wins is important - capture these even if briefly mentioned. If none discussed, write 'No specific wins discussed.'",
+      "format": "list"
+    },
+    {
+      "title": "Current Work & Priorities",
+      "instruction": "Summarize what the person is currently working on. Include: (1) Main projects or initiatives, (2) Current priorities, (3) Progress updates shared, (4) Upcoming deadlines or milestones. This provides context for the rest of the 1:1. If not discussed, write 'Current work not reviewed.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Blockers & Challenges",
+      "instruction": "Document any obstacles, frustrations, or challenges raised. For each: (1) What is the blocker/challenge, (2) Impact on work, (3) Support needed, (4) Proposed resolution or action taken. This is often the most actionable part of a 1:1 - the manager's job is to clear blockers. Be specific about what help is needed. If no blockers raised, write 'No blockers identified.'",
+      "format": "list",
+      "item_format": "| **Challenge** | **Impact** | **Support Needed** | **Resolution** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Feedback Exchanged",
+      "instruction": "Capture feedback given in either direction. Include: (1) Feedback from manager to report, (2) Feedback from report to manager (upward feedback), (3) Feedback about peers or the team environment. For each piece of feedback: what was the feedback, was it positive/constructive, how was it received. Be accurate but diplomatic in summarizing. If no feedback exchanged, write 'No specific feedback exchanged.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Career & Development",
+      "instruction": "Document career development discussion. Include: (1) Career goals mentioned, (2) Skills the person wants to develop, (3) Stretch assignments or growth opportunities discussed, (4) Training, courses, or resources mentioned, (5) Promotion/advancement discussion if any, (6) Long-term aspirations shared. Career growth is a key 1:1 topic. If not discussed, write 'Career development not discussed this session.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Team & Org Topics",
+      "instruction": "Capture discussions about the broader team or organization. Include: (1) Team dynamics or concerns, (2) Org changes or announcements discussed, (3) Cross-team collaboration topics, (4) Culture or process feedback, (5) Questions about company direction. If not discussed, write 'Team/org topics not covered.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Action Items",
+      "instruction": "List follow-up actions from this 1:1. Separate by owner: (1) MANAGER ACTIONS: What the manager committed to do, (2) REPORT ACTIONS: What the report committed to do. Include specific tasks and timing. 1:1s work best when there's follow-through. If no actions, write 'No specific action items.'",
+      "format": "list",
+      "item_format": "| **Owner** | **Action** | **Due** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "Topics for Next Time",
+      "instruction": "Note any topics explicitly deferred to a future 1:1, or items to follow up on. This creates continuity between sessions. If nothing noted, write 'No specific topics queued for next 1:1.'",
+      "format": "list"
+    }
+  ]
+}

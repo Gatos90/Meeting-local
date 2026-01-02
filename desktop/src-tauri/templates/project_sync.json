@@ -1,0 +1,66 @@
+{
+  "name": "Project Sync / Status Update",
+  "description": "Comprehensive project status meeting notes. Captures milestones, risks, decisions, and action items with full context.",
+  "sections": [
+    {
+      "title": "Meeting Information",
+      "instruction": "Extract: (1) Date and time (including timezone if mentioned), (2) Meeting duration or end time, (3) Facilitator/organizer name, (4) Project name if explicitly mentioned. Format as a structured paragraph. If any element is not stated, note it as 'Not specified.'",
+      "format": "string"
+    },
+    {
+      "title": "Attendees & Roles",
+      "instruction": "List all participants with their roles/titles/teams if mentioned. Format: 'Name (Role/Team)'. Group by organization if multiple companies are present (e.g., 'Our Team:' vs 'Client Team:'). Note the meeting organizer/facilitator with '[Facilitator]' tag if identifiable. If someone joined late or left early, note it. If roles are not mentioned for some attendees, just list their names.",
+      "format": "list"
+    },
+    {
+      "title": "Executive Summary",
+      "instruction": "Write a 2-3 sentence executive summary capturing: (1) Overall project health/status, (2) The most critical update or decision from this meeting, (3) Any urgent items requiring immediate attention. Write in past tense. This should enable someone to understand the meeting's outcome without reading further.",
+      "format": "paragraph"
+    },
+    {
+      "title": "Milestone Status",
+      "instruction": "Extract all milestones, deliverables, or key dates discussed. For each, capture: (1) Milestone name/description, (2) Current status (use: On Track, At Risk, Delayed, Completed, Not Started), (3) Target/due date, (4) Any changes from previous plan. If status is not explicitly stated but can be inferred from context (e.g., 'we're behind on X'), make the inference and note it. If no milestones are discussed, write 'No milestone updates in this meeting.'",
+      "format": "list",
+      "item_format": "| **Milestone** | **Status** | **Target Date** | **Notes** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Progress Since Last Sync",
+      "instruction": "Summarize all progress updates shared since the last meeting. Organize by workstream or team if the project has multiple tracks. Include: completed items, progress percentages if mentioned, demos or reviews that occurred. Write in paragraph form with specifics - this section should be detailed enough to understand what actually got done. If no progress is explicitly discussed, write 'Progress updates not covered in this meeting.'",
+      "format": "paragraph"
+    },
+    {
+      "title": "Risks & Issues",
+      "instruction": "Extract ALL risks, issues, concerns, or potential problems mentioned. For each, capture: (1) Risk description - be specific, (2) Impact level (Critical/High/Medium/Low) - infer from tone and context if not explicit, (3) Likelihood if mentioned, (4) Mitigation plan or proposed solution, (5) Owner responsible for mitigation. Include both new risks and updates to existing risks. If no risks are discussed, write 'No risks or issues raised.'",
+      "format": "list",
+      "item_format": "| **Risk/Issue** | **Impact** | **Mitigation** | **Owner** |\n| --- | --- | --- | --- |"
+    },
+    {
+      "title": "Decisions Made",
+      "instruction": "Document all decisions reached during this meeting. A decision is a conclusion or choice that affects project direction. For each, capture: (1) The decision statement (be specific and complete), (2) Key rationale or factors that drove the decision, (3) Any dissenting opinions or concerns noted, (4) Who made or approved the decision. Include both explicit decisions ('We decided to...') and implicit ones (clear consensus reached). If no decisions were made, write 'No decisions finalized in this meeting.'",
+      "format": "list",
+      "item_format": "| **Decision** | **Rationale** | **Decided By** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "Action Items",
+      "instruction": "Extract ALL action items, tasks, follow-ups, and commitments made. Be thorough - this is often the most important section. For each item: (1) Owner - who is responsible (use 'TBD' if not assigned), (2) Task - clear description of what needs to be done (should be actionable), (3) Due date - specific date, or relative (e.g., 'by next sync', 'EOW'), use 'TBD' if not set, (4) Priority if mentioned (High/Medium/Low), (5) Reference - brief context from the discussion. Do NOT miss action items even if casually mentioned (e.g., 'I'll send that over').",
+      "format": "list",
+      "item_format": "| **Owner** | **Task** | **Due** | **Priority** | **Context** |\n| --- | --- | --- | --- | --- |"
+    },
+    {
+      "title": "Dependencies & Blockers",
+      "instruction": "List any dependencies between teams, external blockers, or items waiting on others. Include: (1) What is dependent/blocked, (2) What it's waiting on, (3) Who owns resolving it, (4) Impact on timeline. If none mentioned, write 'No dependencies or blockers discussed.'",
+      "format": "list"
+    },
+    {
+      "title": "Related Documents & Resources",
+      "instruction": "Capture any documents, links, tickets, designs, or resources mentioned. Include: document name/description, URL if stated, type (e.g., Jira ticket, Figma design, Confluence page). If ticket numbers are mentioned (e.g., 'PROJ-123'), include them. If no resources were referenced, write 'No specific documents referenced.'",
+      "format": "list",
+      "item_format": "| **Resource** | **Type** | **Reference** |\n| --- | --- | --- |"
+    },
+    {
+      "title": "Next Meeting",
+      "instruction": "Note the next meeting date/time if mentioned, along with any specific agenda items planned for it. If not discussed, write 'Next meeting not scheduled during this call.'",
+      "format": "string"
+    }
+  ]
+}
